@@ -38,6 +38,14 @@
           <target>17</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>myblog.BasicWebServer</mainClass>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
