@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <div class="container">
+        <form class="login-form" action="http://localhost:8080/register" method="POST">
+            <h2>新規登録</h2>
+            <div class="form-group">
+                <label for="username">ユーザー名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">パスワード (確認):</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="login-button">登録</button>
+            <div class="register-link">
+                Already have an account? <a href="/login">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 
