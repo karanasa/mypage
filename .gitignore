@@ -1,0 +1,25 @@
+# Environment variables
+.env
+*/.env
+
+# Compiled Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Java compiled files
+*.class
+target/
+build/
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log 
+
+# Application configuration
+src/main/resources/config.properties 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .confirmation-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .email-icon {
+            font-size: 48px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .confirmation-message {
+            margin: 20px 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .back-to-login {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-to-login:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="email-icon">✉️</div>
+        <h1>Check Your Email</h1>
+        <div class="confirmation-message">
+            <p>Thank you for registering! We've sent a verification link to your email address.</p>
+            <p>Please check your inbox and click the verification link to complete your registration.</p>
+            <p><strong>Note:</strong> The verification link will expire in 24 hours.</p>
+        </div>
+        <a href="/login" class="back-to-login">Return to Login Page</a>
+    </div>
+</body>
+</html> 

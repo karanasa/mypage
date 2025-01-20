@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <div id="notification" class="notification"></div>
     <header>
         <h1>My Blog</h1>
     </header>
     <div class="container">
-        <form class="login-form" action="http://3.222.178.136:80/login" method="POST">
+        <form class="login-form" action="/login" method="POST">
             <h2>ログイン</h2>
             <div class="form-group">
                 <label for="username">ユーザー名:</label>
@@ -23,10 +24,10 @@
             </div>
             <button type="submit" class="login-button">ログイン</button>
             <div class="register-link">
-                Not a member? <a href="/register">Sign up</a>
+                Not a menber yet? <a href="/register">Sign up</a>
             </div>
         </form>
-
     </div>
+    <script src="/js/notifications.js"></script>
 </body>
 </html> 

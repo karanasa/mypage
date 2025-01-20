@@ -1,0 +1,267 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header styles - used in all pages */
+header {
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+    color: white;
+    padding: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Container styles - used in all pages */
+.container {
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Login/Register page specific container */
+.container:has(.login-form) {
+    max-width: 400px;
+}
+
+/* Blog page specific container */
+.container:not(:has(.login-form)) {
+    max-width: 800px;
+}
+
+/* Login/Register form styles */
+.login-form {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.login-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Button styles */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #357abd 0%, #2868a5 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(1px);
+}
+
+/* Register link styles */
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.register-link a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+/* Blog post styles - mypage.html specific */
+.blog-post {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.blog-post h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Notification styles - login.html and register.html */
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 300px;
+    text-align: center;
+    border-left: 5px solid #45a049;
+    transition: transform 0.2s ease;
+}
+
+.notification:hover {
+    transform: translateX(-50%) scale(1.02);
+}
+
+.notification.error {
+    background-color: #f44336;
+    border-left-color: #d32f2f;
+}
+
+.notification.show {
+    display: block;
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+        margin: 1rem auto;
+    }
+    
+    .login-form {
+        padding: 1.5rem;
+    }
+
+    header {
+        padding: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes slideDown {
+    0% { 
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add these styles to your existing CSS */
+.confirmation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-icon {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.confirmation-message {
+    margin: 20px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.back-to-login {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+} 
