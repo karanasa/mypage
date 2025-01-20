@@ -1,0 +1,8 @@
+# SMTP Configuration Template
+# Copy this file to config.properties and fill in your actual credentials
+
+# SMTP Server Settings
+smtp.host=smtp.example.com
+smtp.port=587
+smtp.username=your-email@example.com
+smtp.password=your-password-here 
