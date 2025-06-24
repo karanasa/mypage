@@ -9,10 +9,10 @@
 <body>
     <div id="notification" class="notification"></div>
     <header>
-        <h1>My Blog</h1>
+        <h1>王様のブログ</h1>
     </header>
-    <div class="container">
-        <form class="login-form" action="/login" method="POST">
+    <div class="container" style="display: flex; align-items: center; justify-content: center;">
+        <form class="login-form" action="/login" method="POST" style="flex: 1 1 0; min-width: 250px;">
             <h2>ログイン</h2>
             <div class="form-group">
                 <label for="username">ユーザー名:</label>
@@ -24,7 +24,8 @@
             </div>
             <button type="submit" class="login-button">ログイン</button>
             <div class="register-link">
-                Not a menber yet? <a href="/register">Sign up</a>
+                まだ王の下僕ではないの?<br>
+                <a href="/register">王の下僕になる</a>
             </div>
         </form>
     </div>
